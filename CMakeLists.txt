@@ -1,12 +1,14 @@
-cmake_minimum_required(VERSION 3.5.0)
+cmake_minimum_required(VERSION 3.12.0)
 
 set(PROJECT_NAME
-        arqblocks)
+        ducoblocks)
 
 
 project(${PROJECT_NAME})
 
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++14")
+set(CMAKE_CXX_STANDARD 14)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_CXX_EXTENSIONS OFF)
 
 if (WIN32)
     set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wa,-mbig-obj -O3")
@@ -14,7 +16,7 @@ endif()
 
 
 if (NOT ARQMA_DIR)
-    set(ARQMA_DIR ~/arqma)
+    set(ARQMA_DIR ~/ducov2)
 endif()
 
 message(STATUS ARQMA_DIR ": ${ARQMA_DIR}")
@@ -104,6 +106,7 @@ set(LIBRARIES
         myext
         mstch
         wallet
+        arqma_mq
         blockchain_db
         cryptonote_core
         cryptonote_protocol
@@ -125,7 +128,7 @@ set(LIBRARIES
         epee
         randomx
         sodium
-        zmq
+        libzmq
         ${Boost_LIBRARIES}
         pthread
         unbound

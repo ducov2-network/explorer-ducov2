@@ -2,8 +2,8 @@
 // Created by mwo on 23/11/16.
 //
 
-#ifndef ARQBLOCKS_VERSION_H_IN_H
-#define ARQBLOCKS_VERSION_H_IN_H
+#ifndef DUCOBLOCKS_VERSION_H_IN_H
+#define DUCOBLOCKS_VERSION_H_IN_H
 
 #define GIT_BRANCH "@GIT_BRANCH@"
 #define GIT_COMMIT_HASH "@GIT_COMMIT_HASH@"
